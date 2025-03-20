@@ -10,4 +10,5 @@ Desktop.ini
 .vscode/
 .DS_Store
 .idea/
+/tests/
 
