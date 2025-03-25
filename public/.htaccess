@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /PHP/Brief3/public/
+
+# If the requested file or directory exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, redirect to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Enable access to the directory
+Options +FollowSymLinks
+Options -Indexes
