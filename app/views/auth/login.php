@@ -4,11 +4,11 @@
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-green-900">
     <div class="min-h-screen flex items-center justify-center">
         <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md">
             <div>
-                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Login to your account</h2>
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Connectez vous <br> Login to your account</h2>
             </div>
             <?php if (isset($error)): ?>
                 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
@@ -17,7 +17,8 @@
             <?php endif; ?>
             <form class="mt-8 space-y-6" action="/PHP/Brief3/public/login.php" method="POST">
                 <div class="rounded-md shadow-sm -space-y-px">
-                    <div>
+                    <!-- Original version with sr-only labels -->
+                    <!-- <div>
                         <label for="email" class="sr-only">Email address</label>
                         <input id="email" name="email" type="email" required 
                                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
@@ -27,6 +28,19 @@
                         <label for="password" class="sr-only">Password</label>
                         <input id="password" name="password" type="password" required 
                                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                               placeholder="Password">
+                    </div> -->
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email address</label>
+                        <input id="email" name="email" type="email" required 
+                               class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                               placeholder="Email address">
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input id="password" name="password" type="password" required 
+                               class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
                                placeholder="Password">
                     </div>
                 </div>
